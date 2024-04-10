@@ -1,7 +1,10 @@
 models/*
-data/dataset/formatted/*
-data/dataset/fake_imgs/*
-data/dataset/real_imgs/*
-data/dataset/test/*
-data/dataset/train/*
-data/dataset/val/*
+dataset/formatted/*
+dataset/fake_imgs/*
+dataset/real_imgs/*
+dataset/test/*
+dataset/train/*
+dataset/val/*
+checkpoints/*
+weights/*
+examples/*
