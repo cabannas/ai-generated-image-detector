@@ -8,3 +8,4 @@ dataset/val/*
 checkpoints/*
 weights/*
 examples/*
+stable_diffusion/fake_dataset/*
