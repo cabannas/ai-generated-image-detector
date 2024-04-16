@@ -3,7 +3,7 @@ from PIL import Image
 import os
 from tqdm import tqdm
 
-def format_images(input_path, output_path, size=(1024, 1024), quality=95):
+def format_images(input_path, output_path, size=(512, 512), quality=95):
     img = Image.open(input_path)
     img = img.resize(size, Image.Resampling.LANCZOS)
 
