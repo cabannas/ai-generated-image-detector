@@ -2,7 +2,6 @@ from pathlib import Path
 from PIL import Image
 from tqdm import tqdm
 import random
-import shutil
 
 # Define the size and quality for formatting the images
 size = (512, 512)
@@ -42,7 +41,7 @@ def format_and_split_images(source_dir, target_dirs, label, size, quality, ratio
             subdir = 'test'
 
         # Create the output path
-        output_path = target_dirs[subdir] / label / image_path.name
+        output_path = target_dirs[subdir] / image_path.name
         # Ensure the target directory exists
         output_path.parent.mkdir(parents=True, exist_ok=True)
         # Save the formatted image
