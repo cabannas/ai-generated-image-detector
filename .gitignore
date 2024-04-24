@@ -10,3 +10,4 @@ weights/*
 examples/*
 stable_diffusion/fake_dataset/*
 stable_diffusion/flickr_faces_hq/*
+frequency_analysis/Data/*

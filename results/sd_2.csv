@@ -1,0 +1,3 @@
+sd_2 model testing on...
+testset,accuracy,avg precision
+ldm,0.7636666666666667,0.9748755745563965

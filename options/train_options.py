@@ -12,7 +12,6 @@ Modification date: 08/04/2024
 
 from .base_options import BaseOptions
 
-
 class TrainOptions(BaseOptions):
     def initialize(self, parser):
         parser = BaseOptions.initialize(self, parser)

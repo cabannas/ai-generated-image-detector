@@ -20,8 +20,7 @@ from options.test_options import TestOptions
 from eval_config import *
 
 
-if __name__ == '__main__':
-
+def main():
     # Running tests
     opt = TestOptions().parse(print_options=False)
     model_name = os.path.basename(model_path).replace('.pth', '')
@@ -48,3 +47,6 @@ if __name__ == '__main__':
     with open(csv_name, 'w') as f:
         csv_writer = csv.writer(f, delimiter=',')
         csv_writer.writerows(rows)
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,3 @@
+ldm_sd model testing on...
+testset,accuracy,avg precision
+ldm,0.9996666666666667,0.9999995558516545

@@ -24,6 +24,7 @@ class BaseOptions():
     def initialize(self, parser):
         parser.add_argument('--mode', default='binary')
         parser.add_argument('--arch', type=str, default='res50', help='architecture for binary classification')
+        parser.add_argument('--res_pretrained', type=bool, default=False, help='Use pretrained ResNet model')
 
         # data augmentation
         parser.add_argument('--rz_interp', default='bilinear')
