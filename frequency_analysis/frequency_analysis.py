@@ -1,3 +1,15 @@
+"""
+This code is part of an adaptation/modification from the original project available at:
+https://github.com/jonasricker/diffusion-model-deepfake-detection
+
+The original code was created by Ricker et al. and is used here under the terms of the license
+specified in the original project's repository. Any use of this adapted/modified code
+must respect the terms of such license.
+
+Adaptations and modifications made by: Daniel Cabanas Gonzalez
+Modification date: 24/04/2024
+"""
+
 """Analyze frequency characteristics of images."""
 import argparse
 import json
