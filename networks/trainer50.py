@@ -13,7 +13,7 @@ Modification date: 08/04/2024
 import functools
 import torch
 import torch.nn as nn
-from networks.resnet import resnet34
+from networks.resnet import resnet50
 from networks.base_model import BaseModel, init_weights
 
 
@@ -26,14 +26,14 @@ class Trainer(BaseModel):
 
         if self.isTrain and not opt.continue_train:
             if opt.res_pretrained:
-                self.model = resnet34(pretrained=True)
+                self.model = resnet50(pretrained=True)
             else:
-                self.model = resnet34(pretrained=False)
-            self.model.fc = nn.Linear(512, 1)
+                self.model = resnet50(pretrained=False)
+            self.model.fc = nn.Linear(2048, 1)
             torch.nn.init.normal_(self.model.fc.weight.data, 0.0, opt.init_gain)
 
         if not self.isTrain or opt.continue_train:
-            self.model = resnet34(num_classes=1)
+            self.model = resnet50(num_classes=1)
 
         if self.isTrain:
             self.loss_fn = nn.BCEWithLogitsLoss()

@@ -1,0 +1,3 @@
+ldm18 model testing on...
+testset,accuracy,avg precision
+ldm,0.9953333333333333,0.9999136910546138

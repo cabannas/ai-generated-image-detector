@@ -14,8 +14,8 @@ import os
 import csv
 import torch
 
-from validate import validate
-from networks.resnet import resnet50
+from validate18 import validate
+from networks.resnet import resnet18
 from options.test_options import TestOptions
 from eval_config import *
 
@@ -33,7 +33,7 @@ def main():
         opt.classes = os.listdir(opt.dataroot) if multiclass[v_id] else ['']
         opt.no_resize = True    # testing without resizing by default
 
-        model = resnet50(num_classes=1)
+        model = resnet18(num_classes=1)
         state_dict = torch.load(model_path, map_location='cpu')
         model.load_state_dict(state_dict['model'])
         model.cuda()

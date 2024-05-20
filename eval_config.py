@@ -27,4 +27,4 @@ vals = ['ldm']
 multiclass = [0]
 
 # model
-model_path = 'weights/ldm.pth'
+model_path = 'weights/ldm34.pth'
