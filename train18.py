@@ -20,10 +20,10 @@ import argparse
 from PIL import Image
 from tensorboardX import SummaryWriter
 
-from validate import validate
+from validate18 import validate
 from data import create_dataloader
 from earlystop import EarlyStopping
-from networks.trainer import Trainer
+from networks.trainer18 import Trainer
 from options.train_options import TrainOptions
 
 

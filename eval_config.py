@@ -21,10 +21,10 @@ mkdir(results_dir)
 dataroot = './dataset/test/'
 
 # list of synthesis algorithms
-vals = ['ldm']
-
+vals = ['own', 'text2img', 'insight', 'inpainting']
+# vals = ['text2img', 'insight']
 # indicates if corresponding testset has multiple classes
-multiclass = [0]
+multiclass = [0,0,0,0]
 
 # model
-model_path = 'weights/ldm34.pth'
+model_path = 'weights/text2img50.pth'
