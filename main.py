@@ -37,8 +37,8 @@ def predict(model, img_tensor):
     return probability
 
 # Configura las rutas al modelo y a la imagen que deseas evaluar
-model_path = 'models/LDM/model_epoch_best.pth'  # Asegúrate de usar la ruta correcta
-image_path = 'data/imgs/SDface.png'
+model_path = 'weights/every50.pth'  # Asegúrate de usar la ruta correcta
+image_path = 'examples/fakegpt.png'
 
 # Carga el modelo y la imagen
 model = load_model(model_path)

@@ -8,6 +8,9 @@ dataset/val/*
 checkpoints/*
 weights/*
 examples/*
+results/*.csv
 stable_diffusion/fake_dataset/*
 stable_diffusion/flickr_faces_hq/*
 frequency_analysis/Data/*
+frequency_analysis/Results/*
+graphs/*

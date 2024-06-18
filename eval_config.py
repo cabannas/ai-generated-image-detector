@@ -27,4 +27,4 @@ vals = ['own', 'text2img', 'insight', 'inpainting']
 multiclass = [0,0,0,0]
 
 # model
-model_path = 'weights/inpainting50.pth'
+model_path = 'weights/every50.pth'

@@ -13,6 +13,8 @@ def smooth_curve(points, factor=0.4):
     return smoothed_points
 
 def plot_metrics(model_path):
+    model_name = os.path.basename(model_path)  # Extrae el nombre del modelo del path
+
     figures_path = f"{model_path}/figures"
     os.makedirs(figures_path, exist_ok=True)  # Crea el directorio de figuras si no existe
 
@@ -26,15 +28,15 @@ def plot_metrics(model_path):
     data_ap = pd.read_csv(path_ap)
     data_loss = pd.read_csv(path_loss)
 
-    # Suavizado de los datos
-    smooth_accuracy = smooth_curve(data_accuracy['Value'])
-    smooth_ap = smooth_curve(data_ap['Value'])
-    smooth_loss = smooth_curve(data_loss['Value'])
+    # Suavizado de los datos con factores de suavizado diferentes
+    smooth_accuracy = smooth_curve(data_accuracy['Value'], factor=0.4)
+    smooth_ap = smooth_curve(data_ap['Value'], factor=0.4)
+    smooth_loss = smooth_curve(data_loss['Value'], factor=0.6)  # Factor de suavizado aumentado para loss
 
     # Graficar la pérdida
     fig_loss, ax_loss = plt.subplots()
     ax_loss.plot(data_loss['Step'], smooth_loss, label='Loss', color='tab:blue')
-    ax_loss.set_title('Loss over Training Steps')
+    ax_loss.set_title(f'Loss over Training Steps for {model_name}')
     ax_loss.set_xlabel('Training Steps')
     ax_loss.set_ylabel('Loss')
     ax_loss.grid(True)
@@ -43,7 +45,7 @@ def plot_metrics(model_path):
     # Graficar la precisión
     fig_accuracy, ax_accuracy = plt.subplots()
     ax_accuracy.plot(data_accuracy['Step'], smooth_accuracy, label='Accuracy', color='tab:green')
-    ax_accuracy.set_title('Accuracy over Training Steps')
+    ax_accuracy.set_title(f'Accuracy over Training Steps for {model_name}')
     ax_accuracy.set_xlabel('Training Steps')
     ax_accuracy.set_ylabel('Accuracy')
     ax_accuracy.grid(True)
@@ -52,7 +54,7 @@ def plot_metrics(model_path):
     # Graficar Average Precision
     fig_ap, ax_ap = plt.subplots()
     ax_ap.plot(data_ap['Step'], smooth_ap, label='AP', color='tab:red')
-    ax_ap.set_title('Average Precision over Training Steps')
+    ax_ap.set_title(f'Average Precision over Training Steps for {model_name}')
     ax_ap.set_xlabel('Training Steps')
     ax_ap.set_ylabel('Average Precision')
     ax_ap.grid(True)
