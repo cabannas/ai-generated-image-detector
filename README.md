@@ -141,11 +141,6 @@ frequency_analysis/
 │   └── text2img/
 ├── Results/
 └── src/
-    ├── converter.py
-    ├── resize.py
-    ├── square.py
-    └── frequency_analysis.py
-
 ```
 
 
