@@ -133,15 +133,19 @@ Before performing frequency analysis, populate the `Data` folder with samples fr
 ```bash
 frequency_analysis/
 ├── Data/
-│ ├── ffhq/
-│ ├── imdb-wiki/
-│ ├── inpainting/
-│ ├── insight/
-│ ├── own/
-│ └── text2img/
+│   ├── ffhq/
+│   ├── imdb-wiki/
+│   ├── inpainting/
+│   ├── insight/
+│   ├── own/
+│   └── text2img/
 ├── Results/
-├── src/
-└── frequency_analysis.py
+└── src/
+    ├── converter.py
+    ├── resize.py
+    ├── square.py
+    └── frequency_analysis.py
+
 ```
 
 
